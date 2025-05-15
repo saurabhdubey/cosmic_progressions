@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="results-container">
+    <h1><i class="fas fa-star"></i> Your Cosmic Progressions</h1>
+    <p class="birth-date">Birth Date: {{ birth_date }}</p>
+    
+    <div class="planets-grid">
+        {% for planet, data in planetary_data.items() %}
+        <div class="planet-card {{ planet }}">
+            <div class="planet-image">
+                <img src="{{ url_for('static', filename='images/planets/' + planet + '.png') }}" 
+                     alt="{{ planet }}">
+            </div>
+            
+            <div class="zodiac-sign">
+                <img src="{{ url_for('static', filename='images/zodiac/' + data.sign + '.png') }}" 
+                     alt="{{ data.sign }}">
+                <span>{{ data.sign|title }}</span>
+            </div>
+            
+            <div class="planet-position">
+                {{ data.degree }}°
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

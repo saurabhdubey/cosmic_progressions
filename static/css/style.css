@@ -1,0 +1,90 @@
+/* Base Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background: #0f0c29;
+    background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+    color: white;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Upload Section */
+.upload-container {
+    text-align: center;
+    padding: 2rem;
+}
+
+.upload-box {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 2rem;
+    margin-top: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.drop-area {
+    border: 2px dashed rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    padding: 3rem 2rem;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.drop-area:hover {
+    border-color: #6c5ce7;
+}
+
+.upload-label i {
+    font-size: 3rem;
+    color: #6c5ce7;
+    margin-bottom: 1rem;
+}
+
+/* Results Page */
+.planets-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.planet-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    padding: 1.5rem;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.planet-card:hover {
+    transform: translateY(-10px);
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.planet-image img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+}
+
+.zodiac-sign img {
+    width: 60px;
+    height: 60px;
+    margin-top: 1rem;
+}
+
+.planet-position {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    color: #6c5ce7;
+    font-weight: bold;
+}
